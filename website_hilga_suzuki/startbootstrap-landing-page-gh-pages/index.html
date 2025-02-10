@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile & No HP - Suzuki</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-100">
+        <!-- Navbar Tetap (Fixed) -->
+        <nav class="bg-[#005BAC] p-4 flex justify-between items-center text-white shadow-md w-full fixed top-0 left-0 z-50">
+            <h1 class="text-xl font-bold">Suzuki NJS Naripan Bandung</h1>
+    
+            <!-- Profile Section -->
+            <div class="relative">
+                <button id="profileButton" role="button" tabindex="0" class="flex items-center space-x-3 focus:outline-none">
+                    <img src="assets/img/bg-profile-1.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="Profile">
+                    <div class="text-right hidden sm:block">
+                        <span class="block font-semibold">Hilga Julian</span>
+                        <a href="https://wa.me/6287720701827" target="_blank" class="block text-sm text-gray-200 hover:underline">
+                            +62 877-2070-1827
+                        </a>
+                    </div>
+                </button>
+    
+                <!-- Dropdown Menu -->
+                <div id="profileMenu" class="hidden absolute right-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg overflow-hidden">
+                </div>
+            </div>
+        </nav>
+    
+        <!-- Konten Dummy untuk Uji Scroll -->
+        <div class="mt-16 p-6">
+            <h2 class="text-2xl font-bold">Selamat Datang di Suzuki NJS Naripan Bandung</h2>
+            <p class="mt-4 text-gray-700">Suzuki Indonesia dengan bangga berperan dalam industri otomotif, memproduksi, serta memasarkan berbagai pilihan kendaraan. Kami tidak hanya menyediakan produk berkualitas, tetapi juga menghadirkan pengalaman berkendara yang memuaskan untuk Anda.</p>
+            <div class="h-[50px] bg-gray-100 mt-6"></div>
+        </div>
+    
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const profileButton = document.getElementById("profileButton");
+                const profileMenu = document.getElementById("profileMenu");
+    
+                profileButton.addEventListener("click", function (event) {
+                    event.stopPropagation(); // Mencegah event bubbling
+                    profileMenu.classList.toggle("hidden");
+                });
+    
+                // Menutup dropdown jika klik di luar
+                document.addEventListener("click", function (event) {
+                    if (!profileButton.contains(event.target) && !profileMenu.contains(event.target)) {
+                        profileMenu.classList.add("hidden");
+                    }
+                });
+    
+                // Menutup menu saat tombol ESC ditekan
+                document.addEventListener("keydown", function (event) {
+                    if (event.key === "Escape") {
+                        profileMenu.classList.add("hidden");
+                    }
+                });
+            });
+        </script>
+    </body>
+    </html>    
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Landing Page - SUZUKI NJS NARIPAN BANDUNG Theme</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <img src="assets/img/logosuzuki.jpg" alt="Logo" class="logo">
+<style>
+  .logo {
+    width: 200px; 
+    height: auto; 
+  }
+</style>
+    </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Slide Gambar</title>
+        <style>
+            * { box-sizing: border-box; margin: 0; padding: 0; }
+            .slider-container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+                position: relative;
+            }
+            .slider {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .slide {
+                min-width: 100%;
+            }
+            img {
+                width: 100%;
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="assets/img/bg-slide-1.jpg" alt="Gambar 1"></div>
+            <div class="slide"><img src="assets/img/bg-slide-2.jpg" alt="Gambar 2"></div>
+            <div class="slide"><img src="assets/img/bg-slide-3.jpg" alt="Gambar 3"></div>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function slideNext() {
+            const slider = document.querySelector('.slider');
+            index++;
+            if (index > 2) index = 0;
+            slider.style.transform = `translateX(${-index * 100}%)`;
+        }
+        setInterval(slideNext, 3000);
+    </script>
+    </body>
+    <body>
+        <!-- Navigation-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container">
+                <a class="navbar-brand" href="#!">SUZUKI NJS NARIPAN BANDUNG </a>
+                <a class="btn btn-primary" href="#signup">Lokasi 📍
+
+                </a>
+            </div>
+        </nav>
+        <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gambar</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="assets/img/bg-gambar-1.jpg" alt="Gambar 1">
+        <img src="assets/img/bg-gambar-2.jpg" alt="Gambar 2">
+        <img src="assets/img/bg-gambar-3.jpg" alt="Gambar 3">
+        <img src="assets/img/bg-gambar-4.jpg" alt="Gambar 4">
+    </div>
+</body>
+</html>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+            </div>
+        </header>
+        <!-- Icons Grid-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h3>PT. NUSANTARA JAYA SENTOSA</h3>
+                            <p class="lead mb-0">Main Dealer Resmi Mobil Suzuki Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <h3>SUZUKI NJS NARIPAN BANDUNG</h3>
+                            <p class="lead mb-0">Jl. Naripan No.68, Kb. Pisang, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40112</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
+                            <h3>INFO TEST DRIVE / PEMESANAN</h3>
+                            <h3>HILGA JULIAN</h3>
+                            <p class="lead mb-0">Cukup kasih tahu apa yang Anda butuhkan, dan saya rekomendasikan yang terbaik sesuai budget dan keinginan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>ALL NEW BALENO DAN S.PRESSO</title>
+                <style>
+                    .slideshow-container {
+                        position: relative;
+                        width: 100%;
+                        max-width: 400px;
+                        margin: auto;
+                        overflow: hidden;
+                    }
+            
+                    .slides {
+                        display: flex;
+                        transition: transform 1s ease-in-out;
+                    }
+            
+                    .slide {
+                        min-width: 100%;
+                        box-sizing: border-box;
+                    }
+            
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+            
+                </style>
+            </head>
+            <body>
+                <h2>ALL NEW BALENO DAN S.PRESSO</h2>
+                <div class="slideshow-container">
+                    <div class="slides">
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-12.jpg" alt="Gambar 1">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-13.jpg" alt="Gambar 2">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-14.jpg" alt="Gambar 3">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-15.jpg" alt="Gambar 4">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-20.jpg" alt="Gambar 5">
+                        </div>
+                        <div class="slide">
+                            <img src="assets/img/bg-gambar-21.jpg" alt="Gambar 6">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    let currentIndex = 0;
+                    const slides = document.querySelectorAll('.slide');
+                    const totalSlides = slides.length;
+            
+                    function showSlide() {
+                        const slidesContainer = document.querySelector('.slides');
+                        const offset = -currentIndex * 100;
+                        slidesContainer.style.transform = `translateX(${offset}%)`;
+            
+                        currentIndex = (currentIndex + 1) % totalSlides;
+                    }
+            
+                    // Set interval untuk mengubah gambar setiap 3 detik
+                    setInterval(showSlide, 3000);
+                </script>
+            </body>
+        </section>
+        <!-- Image Showcases-->
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>XL 7 HYBRID</h2>
+                        <p class="lead mb-0">Suzuki New XL7 hadir kembali dengan teknologi Smart Hybrid Vehicle by Suzuki (SHVS). Teknologi cerdas membuat New XL7 menjadi kendaraan ramah lingkungan.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-2.jpg')"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>GRAND VITARA HYBRID</h2>
+                        <p class="lead mb-0">Menghadirkan SUV dengan desain exterior yang lebih berkarakter, lebih kokoh, dan tampilan lebih tangguh. Dilengkapi mesin Smart Hybrid Vehicle by Suzuki(SHVS).</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-3 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-3.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+                        <h2>JIMNY</h2>
+                        <p class="lead mb-0">Suzuki Jimny menggunakan mesin K15B berkapasitas 1.500 cc, dengan tenaga sebesar 102 PS / 6.000 rpm, dan torsi 130 Nm / 4000 rpm.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-4.jpg')"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>ALL NEW BALENO</h2>
+                        <p class="lead mb-0">Suzuki Baleno kini hadir dengan desain yang mencolok dan elegan, berkendara nyaman dengan bahan bakar bensin yang irit dan juga desain interior yang lebih nyaman.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-3 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-5.jpg')"></div>
+                    <div class="col-lg-6 order-lg-2 my-auto showcase-text">
+                        <h2>S.PRESSO</h2>
+                        <p class="lead mb-0">
+                            Sporty di jalan, stylish luar dalam. Suzuki Spresso tampil fresh sebagai compact city car dengan rasa SUV. Nikmati perjalanan yang asyik dilengkapi dengan strong engine performance.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-6.jpg')"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>S.PRESSO</h2>
+                        <p class="lead mb-0">Suzuki Spresso hadir dengan panel instrumen yang stylish, ergonomis, dan gampang dijangkau. Semakin lengkap dengan kabin yang lebih lega dan nyaman.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-7.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>ALL NEW ERTIGA</h2>
+                        <p class="lead mb-0">Suzuki All New Ertiga Hybrid dilengkapi Electronic Stabilitu Program (ESP) untuk menghindari selip saat bermanuver saat di perjalanan.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img/bg-showcase-8.jpg')"></div>
+                    <div class="col-lg-6 my-auto showcase-text">
+                        <h2>NEW CARRY</h2>
+                        <p class="lead mb-0">New Carry Pick Up kini dilengkapi dengan bak yang lebih luas dan sasis yang lebih kuat membuat kapasitas angkut hingga 1 ton. Hadir dalam varian wide deck dan flat deck yang lebih ekonomis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Gambar</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="assets/img/bg-gambar-5.jpg" alt="Gambar 5">
+        <img src="assets/img/bg-gambar-6.jpg" alt="Gambar 6">
+        <img src="assets/img/bg-gambar-7.jpg" alt="Gambar 7">
+        <img src="assets/img/bg-gambar-8.jpg" alt="Gambar 8">
+        <img src="assets/img/bg-gambar-9.jpg" alt="Gambar 9">
+    </div>
+</body>
+</html>
+        <!-- Testimonials-->
+        <section class="testimonials text-center bg-light">
+            <div class="container">
+                <h2 class="mb-5">Serah Terima Kendaraan</h2>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid mb-3" src="assets/img/testimonials-1.jpg" alt="..." />
+                            <h5>Haji Deden & Hj. Yani</h5>
+                            <p class="font-weight-light mb-0">(Pengusaha Kulit Bahan Sepatu dan Tas)"Mudah-mudahan mobil barunya membawa lancar buat usaha saya"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid mb-3" src="assets/img/testimonials-2.jpg" alt="..." />
+                            <h5>Pak Jusak dan Pak Petrus</h5>
+                            <p class="font-weight-light mb-0">(Operasional GKI Guntur)"Terima kasih Hilga udah bantuin urus urus dokumennya sampai beres. Semoga Hilga jualannya lebih banyak lagi"</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                            <img class="img-fluid mb-3" src="assets/img/testimonials-3.jpg" alt="..." />
+                            <h5>Pak Yadi & Bu Lilis</h5>
+                            <p class="font-weight-light mb-0">(PEMILIK GROSIR SEMBAKO)"Mantap A Hilga, XL7nya mantap pisan, bersih wangi pokonya mobil siap tempur"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Call to Action-->
+        <section class="call-to-action text-white text-center" id="signup">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6">
+                        <h2 class="mb-4">Lokasi Dealer Suzuki NJS Naripan Bandung</h2>
+                        <h2><iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7471253511803!2d107.61312847441981!3d-6.920804267737618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e753d6100b27%3A0xf5b0d9a5f7e31abe!2sSuzuki%20Naripan%20Bandung%20PT%20Nusantara%20Jaya%20Sentosa!5e0!3m2!1sid!2sid!4v1738912621570!5m2!1sid!2sid"
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                        </h2>
+                </div>
+            </div>
+        </section>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Galeri Gambar</title>
+            <style>
+                .gallery {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                    gap: 10px;
+                }
+        
+                .gallery img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 10px;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="gallery">
+                <img src="assets/img/bg-gambar-16.jpg" alt="Gambar 5">
+                <img src="assets/img/bg-gambar-17.jpg" alt="Gambar 6">
+                <img src="assets/img/bg-gambar-18.jpg" alt="Gambar 7">
+                <img src="assets/img/bg-gambar-19.jpg" alt="Gambar 8">
+            </div>
+        </body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Ikon WhatsApp Mengambang</title>
+            <style>
+                /* Gaya ikon mengambang */
+                .wa-icon {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    width: 60px;
+                    height: 60px;
+                    background-color: #25D366;
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 30px;
+                    cursor: pointer;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                }
+        
+                /* Tooltip popup info */
+                .wa-popup {
+                    position: fixed;
+                    bottom: 90px;
+                    right: 20px;
+                    width: 220px;
+                    background-color: white;
+                    color: black;
+                    padding: 10px;
+                    border-radius: 8px;
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+                    display: none;
+                    text-align: center;
+                }
+        
+                .wa-popup img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                }
+        
+                .wa-popup a {
+                    display: block;
+                    padding: 8px;
+                    background-color: #25D366;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                }
+            </style>
+        </head>
+        <body>
+        
+            <!-- Ikon WhatsApp Mengambang -->
+            <div class="wa-icon" onclick="togglePopup()">📞</div>
+        
+            <!-- Popup WhatsApp -->
+            <div class="wa-popup" id="wa-popup">
+                <img src="assets/img/bg-profile-1.jpg" alt="Foto Profil">
+                <p>Hubungi saya di WhatsApp!</p>
+                <a href="https://wa.me/6287720701827" target="_blank">Chat via WhatsApp</a>
+            </div>
+        
+            <script>
+                function togglePopup() {
+                    var popup = document.getElementById("wa-popup");
+                    popup.style.display = (popup.style.display === "block") ? "none" : "block";
+                }
+            </script>
+        </body>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Pricelist Mengambang Kiri</title>
+            <script src="https://cdn.tailwindcss.com"></script>
+        </head>
+        <body class="bg-gray-100">
+        
+            <!-- Pricelist Mengambang (Sebelah Kiri) -->
+            <div id="floatingPricelist" class="fixed bottom-5 left-5 bg-white shadow-lg rounded-lg p-4 w-80 border border-gray-300">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-lg font-bold">Pricelist</h2>
+                    <button onclick="closePricelist()" class="text-gray-500 hover:text-red-500">✖</button>
+                </div>
+                
+                <!-- List Mobil dengan Grid -->
+                <ul class="mt-2 text-gray-700 max-h-60 overflow-y-auto space-y-2">
+                    <li class="font-bold text-blue-600">🚗 Suzuki XL7</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ZETA M/T</span> 
+                        <span class="text-right font-semibold">Rp 272.250.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ZETA A/T</span> 
+                        <span class="text-right font-semibold">Rp 283.600.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 BETA HYBRID M/T</span> 
+                        <span class="text-right font-semibold">Rp 300.400.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 BETA HYBRID A/T</span> 
+                        <span class="text-right font-semibold">Rp 311.450.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ALPHA HYBRID M/T</span> 
+                        <span class="text-right font-semibold">Rp 310.350.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ALPHA HYBRID A/T</span> 
+                        <span class="text-right font-semibold">Rp 321.400.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ALPHA HYBRID 2 TONE M/T</span> 
+                        <span class="text-right font-semibold">Rp 312.450.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ XL7 ALPHA HYBRID 2 TONE A/T</span> 
+                        <span class="text-right font-semibold">Rp 323.600.000</span>
+                    </li>
+        
+                    <li class="font-bold text-blue-600">🚗 Suzuki Grand Vitara</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Grand Vitara GX A/T</span> 
+                        <span class="text-right font-semibold">Rp 405.300.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Grand Vitara GX 2 TONE</span> 
+                        <span class="text-right font-semibold">Rp 408.250.000</span>
+                    </li>
+        
+                    <li class="font-bold text-blue-600">🚗 Suzuki Jimny</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Jimny 5 Door M/T</span> 
+                        <span class="text-right font-semibold">Rp 495.000.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Jimny 5 Door A/T</span> 
+                        <span class="text-right font-semibold">Rp 507.650.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Jimny 5 Door 2 TONE M/T</span> 
+                        <span class="text-right font-semibold">Rp 498.350.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Jimny 5 Door 2 TONE A/T</span> 
+                        <span class="text-right font-semibold">Rp 51.850.000</span>
+                    </li>
+        
+                    <li class="font-bold text-blue-600">🚗 Suzuki All New BALENO</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ ALL NEW BALENO A/T</span> 
+                        <span class="text-right font-semibold">Rp 298.800.000</span>
+                    </li>
+                    
+                    <li class="font-bold text-blue-600">🚗 Suzuki S.PRESSO</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ S.PRESSO M/T</span> 
+                        <span class="text-right font-semibold">Rp 177.950.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ S.PRESSO A/T</span> 
+                        <span class="text-right font-semibold">Rp 187.550.000</span>
+                    </li>
+
+                    <li class="font-bold text-blue-600">🚗 Suzuki All New Ertiga</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga GL M/T</span> 
+                        <span class="text-right font-semibold">Rp 267.700.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga GL A/T</span> 
+                        <span class="text-right font-semibold">Rp 278.600.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga GX HYBRID M/T</span> 
+                        <span class="text-right font-semibold">Rp 289.050.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga GX HYBRID A/T</span> 
+                        <span class="text-right font-semibold">Rp 300.200.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga CRUISE HYBRID M/T</span> 
+                        <span class="text-right font-semibold">Rp 301.800.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga CRUISE HYBRID A/T</span> 
+                        <span class="text-right font-semibold">Rp 312.850.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga CRUISE HYBRID 2 TONE M/T</span> 
+                        <span class="text-right font-semibold">Rp 303.750.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ Ertiga CRUISE HYBRID 2 TONE A/T</span> 
+                        <span class="text-right font-semibold">Rp 314.900.000</span>
+                    </li>
+
+                    <li class="font-bold text-blue-600">🚗 Suzuki New Carry</li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ CARRY 1.5 FD M/T</span> 
+                        <span class="text-right font-semibold">Rp 176.650.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ CARRY 1.5 FD AC PS M/T</span> 
+                        <span class="text-right font-semibold">Rp 186.150.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ CARRY 1.5 WD M/T</span> 
+                        <span class="text-right font-semibold">Rp 177.750.000</span>
+                    </li>
+                    <li class="grid grid-cols-2 px-2 py-1 border-b">
+                        <span>➤ CARRY 1.5 WD AC PS M/T</span> 
+                        <span class="text-right font-semibold">Rp 187.100.000</span>
+                    </li>
+                </ul>
+        
+                <button onclick="downloadPricelist()" class="mt-3 bg-blue-600 text-white w-full py-2 rounded-lg hover:bg-blue-700">
+                    Download PDF 📥
+                </button>
+            </div>
+        
+            <!-- Tombol untuk menampilkan kembali Pricelist jika ditutup -->
+<button id="showPricelistButton" onclick="openPricelist()" class="hidden fixed bottom-5 left-5 bg-green-600 text-white p-3 rounded-full shadow-lg">
+    Pricelist 📋
+</button>
+
+<!-- Popup Pricelist -->
+<div id="floatingPricelist" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+    <div class="bg-white p-5 rounded-lg shadow-lg w-3/4 h-3/4 relative">
+        <button onclick="closePricelist()" class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full">❌</button>
+        <iframe src="assets/pricelist.pdf" class="w-full h-full"></iframe>
+        <button onclick="downloadPricelist()" class="mt-3 bg-blue-600 text-white p-2 rounded-lg">
+            📥 Download Pricelist
+        </button>
+    </div>
+</div>
+
+<script>
+    function closePricelist() {
+        document.getElementById("floatingPricelist").classList.add("hidden");
+        document.getElementById("showPricelistButton").classList.remove("hidden");
+    }
+
+    function openPricelist() {
+        document.getElementById("floatingPricelist").classList.remove("hidden");
+        document.getElementById("showPricelistButton").classList.add("hidden");
+    }
+
+    function downloadPricelist() {
+        window.location.href = "file:///C:/Users/Owner/Downloads/DAFTAR%20HARGA%20SUZUKI.pdf"; // Ganti dengan path PDF asli
+    }
+</script>
+        <footer>
+            <h2>Hubungi Kontak</h2>
+            <a href="https://wa.me/6287720701827" class="wa-animated" target="_blank">WhatsApp</a>
+            <style>
+        .wa-animated {
+            display: inline-block;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .wa-animated:hover {
+            transform: scale(1.1);
+        }
+            </style>
+        <a href="https://www.instagram.com/juliansuzukibandung" class="instagram-animated" target="_blank">Instagram</a>
+            <style>
+        .instagram-animated {
+            display: inline-block;
+            background: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+            .instagram-animated:hover {
+            transform: scale(1.1);
+        }
+        </style>
+        <a href="mailto:suzuki.naripan.hilga.julian@gmail.com" class="email-animated">Email</a>
+            <style>
+        .email-animated {
+            display: inline-block;
+            background: linear-gradient(45deg, #007bff, #00c6ff);
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .email-animated:hover {
+            transform: scale(1.1);
+        }
+         </style>
+        <a href="https://www.facebook.com/Julian Suzuki Bandung" class="email-animated">Facebook</a>
+            <style>
+        .email-animated {
+            display: inline-block;
+            background: linear-gradient(45deg, #1877f2);
+            color: white;
+            padding: 12px 24px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease-in-out;
+        }
+        .email-animated:hover {
+            transform: scale(1.1);
+        }
+    </style>
+            <p>Suzuki Bandung</p>
+            <p>PT. NUSANTARA JAYA SENTOSA</p>
+            <p>© 2025 Suzuki NJS Naripan Bandung by Ghive</p>
+        </footer>
+    </body>
+</html>
