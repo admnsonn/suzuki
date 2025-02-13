@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="bg-blue-600 p-4 shadow-lg fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-8">
           <h1 className="text-white text-lg md:text-2xl font-bold">
             <a href="/" className="hover:text-blue-300 transition duration-300">
               Suzuki NJS Naripan Bandung
@@ -65,10 +65,10 @@ function Navbar() {
                 src={profil}
                 className="w-32 h-32 object-cover rounded-full border-4 border-gray-300 shadow-md"
               />
-              <p className="text-gray-800 font-semibold text-center mt-4 text-lg leading-relaxed">
-                Saya siap membantu menemukan jenis mobil yang cocok sesuai
+              <p className="text-gray-800 font-semibold text-center mt-4 text-lg leading-relaxed italic">
+                "Saya siap membantu menemukan jenis mobil yang cocok sesuai
                 dengan
-                <span className="text-blue-600"> budget </span> Anda.
+                <span className="text-blue-600"> budget </span> Anda."
               </p>
             </div>
           </div>
