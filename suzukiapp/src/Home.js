@@ -50,7 +50,6 @@ import {
 } from "react-icons/fa";
 import React, { useRef, useState } from "react";
 
-
 function Home() {
   const lokasiRef = useRef(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -244,133 +243,53 @@ function Home() {
         </Swiper>
       </div>
 
-      <div className="w-full bg-sky-100 mt-[30px] p-4 flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* CARD 1 */}
-          <div className="mt-[20px] mb-[30px]">
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4 mb-[20px]">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo16}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  XL 7 HYBRID
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  Suzuki New XL7 hadir kembali dengan teknologi Smart Hybrid
-                  Vehicle by Suzuki (SHVS). Teknologi cerdas membuat New XL7
-                  menjadi kendaraan ramah lingkungan.
-                </p>
+      <div className="w-full bg-sky-100 mt-8 p-4 flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-7xl">
+          {[Promo16, Promo17, Promo19, Promo18, Promo20, Promo21, Promo22].map(
+            (image, index) => (
+              <div key={index} className="flex justify-center">
+                <div className="w-full max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4">
+                  <img
+                    className="w-full h-30 object-cover rounded-xl"
+                    src={image}
+                    alt="Promo"
+                  />
+                  <div className="p-4">
+                    <h2 className="text-xl font-semibold text-gray-800 text-center">
+                      {index === 0
+                        ? "XL 7 HYBRID"
+                        : index === 1
+                        ? "GRAND VITARA"
+                        : index === 2
+                        ? "ALL NEW BALENO"
+                        : index === 3
+                        ? "JIMNY"
+                        : index === 4
+                        ? "S. PRESSO"
+                        : index === 5
+                        ? "ALL NEW ERTIGA"
+                        : "NEW CARRY"}
+                    </h2>
+                    <p className="mt-2 text-gray-600 text-center">
+                      {index === 0
+                        ? "Suzuki New XL7 hadir kembali dengan teknologi Smart Hybrid Vehicle by Suzuki (SHVS). Teknologi cerdas membuat New XL7 menjadi kendaraan ramah lingkungan."
+                        : index === 1
+                        ? "Menghadirkan SUV dengan desain exterior yang lebih berkarakter, lebih kokoh, dan tampilan lebih tangguh. Dilengkapi mesin Smart Hybrid Vehicle by Suzuki (SHVS)."
+                        : index === 2
+                        ? "Suzuki Baleno kini hadir dengan desain yang mencolok dan elegan, berkendara nyaman dengan bahan bakar bensin yang irit."
+                        : index === 3
+                        ? "Suzuki Jimny menggunakan mesin K15B berkapasitas 1.500 cc, dengan tenaga sebesar 102 PS / 6.000 rpm, dan torsi 130 Nm / 4000 rpm."
+                        : index === 4
+                        ? "Suzuki S. PRESSO sporty di jalan, stylish luar dalam. Tampil fresh sebagai compact city car dengan rasa SUV."
+                        : index === 5
+                        ? "Suzuki All New Ertiga Hybrid dilengkapi Electronic Stability Program (ESP) untuk menghindari selip saat bermanuver saat di perjalanan."
+                        : "New Carry Pick Up kini dilengkapi dengan bak yang lebih luas dan sasis yang lebih kuat membuat kapasitas angkut hingga 1 ton. Hadir dalam varian wide deck dan flat deck yang lebih ekonomis."}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4 mb-[20px]">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo17}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  GRAND VITARA
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  Menghadirkan SUV dengan desain exterior yang lebih
-                  berkarakter, lebih kokoh, dan tampilan lebih tangguh.
-                  Dilengkapi mesin Smart Hybrid Vehicle by Suzuki (SHVS).
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo19}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  ALL NEW BALENO
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  Suzuki Baleno kini hadir dengan desain yang mencolok dan
-                  elegan, berkendara nyaman dengan bahan bakar bensin yang irit.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* CARD 2 */}
-          <div className="mt-[20px] mb-[30px]">
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4 mb-[20px]">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo18}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">JIMNY</h2>
-                <p className="mt-2 text-gray-600">
-                  Suzuki Jimny menggunakan mesin K15B berkapasitas 1.500 cc,
-                  dengan tenaga sebesar 102 PS / 6.000 rpm, dan torsi 130 Nm /
-                  4000 rpm.
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo20}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  S. PRESSO
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  Suzuki S. PRESSO sporty di jalan, stylish luar dalam. Tampil
-                  fresh sebagai compact city car dengan rasa SUV.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* CARD 3 */}
-          <div className="mt-[20px] mb-[30px]">
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4 mb-[20px]">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo21}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  ALL NEW ERTIGA
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  Suzuki All New Ertiga Hybrid dilengkapi Electronic Stabilitu
-                  Program (ESP) untuk menghindari selip saat bermanuver saat di
-                  perjalanan.
-                </p>
-              </div>
-            </div>
-            <div className="max-w-sm rounded-2xl overflow-hidden shadow-lg bg-white p-4">
-              <img
-                className="w-full h-60 object-cover rounded-xl"
-                src={Promo22}
-                alt={""}
-              />
-              <div className="p-4">
-                <h2 className="text-xl font-semibold text-gray-800">
-                  NEW CARRY
-                </h2>
-                <p className="mt-2 text-gray-600">
-                  New Carry Pick Up kini dilengkapi dengan bak yang lebih luas
-                  dan sasis yang lebih kuat membuat kapasitas angkut hingga 1
-                  ton. Hadir dalam varian wide deck dan flat deck yang lebih
-                  ekonomis.
-                </p>
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
       </div>
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 justify-center items-center mt-10 px-4">

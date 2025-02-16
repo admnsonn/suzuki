@@ -36,7 +36,7 @@ const pricelistData = [
       { type: "Jimny 5 Door M/T", price: "Rp 495.000.000" },
       { type: "Jimny 5 Door A/T", price: "Rp 507.650.000" },
       { type: "Jimny 5 Door 2 TONE M/T", price: "Rp 498.350.000" },
-      { type: "Jimny 5 Door 2 TONE A/T", price: "Rp 51.850.000" },
+      { type: "Jimny 5 Door 2 TONE A/T", price: "Rp 510.850.000" },
     ],
   },
   {
