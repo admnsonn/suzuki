@@ -2,6 +2,8 @@ import { useState } from "react";
 import Navbar from "./Component/Navbar";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import xl7 from "./Asset/xl7.jpg";
+import pricelist1 from "./Asset/pricelist1.png";
+import pricelist2 from "./Asset/pricelist2.png";
 
 const pricelistData = [
   {
@@ -105,6 +107,19 @@ function Pricelist() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
+
+        <div className="flex justify-center gap-4 mb-6">
+          <img
+            src={pricelist1}
+            alt="Suzuki Model 1"
+            className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 rounded-lg shadow-md"
+          />
+          <img
+            src={pricelist2}
+            alt="Suzuki Model 2"
+            className="w-1/2 sm:w-1/2 md:w-1/3 lg:w-1/3 xl:w-1/3 rounded-lg shadow-md"
+          />
+        </div>
 
         <div className="space-y-6">
           {filteredCars.map((car) => (
