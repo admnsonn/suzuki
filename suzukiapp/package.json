@@ -1,6 +1,7 @@
 {
   "name": "suzukiapp",
   "version": "0.1.0",
+  "homepage": "https://suzukibandungjuara.com/",
   "private": true,
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
