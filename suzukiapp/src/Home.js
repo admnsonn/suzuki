@@ -35,6 +35,12 @@ import gambar9 from "./Asset/gambar9.jpg";
 import testimoni1 from "./Asset/testimoni1.jpg";
 import testimoni2 from "./Asset/testimoni2.jpg";
 import testimoni3 from "./Asset/testimoni3.jpg";
+import Promo010 from "./Asset/010.png";
+import Promo020 from "./Asset/020.png";
+import Promo030 from "./Asset/030.png";
+import Promo040 from "./Asset/040.png";
+import Promo050 from "./Asset/050.png";
+import Promo060 from "./Asset/060.png";
 import profil from "./Asset/profil.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -99,21 +105,42 @@ function Home() {
         >
           <SwiperSlide>
             <img
-              src={Promo1}
+              src={Promo010}
               alt="Slide 1"
               className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={Promo2}
+              src={Promo020}
               alt="Slide 2"
               className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
-              src={Promo3}
+              src={Promo030}
+              alt="Slide 3"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={Promo040}
+              alt="Slide 3"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={Promo050}
+              alt="Slide 3"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src={Promo060}
               alt="Slide 3"
               className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
             />
