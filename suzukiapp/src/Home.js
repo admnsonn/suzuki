@@ -229,42 +229,42 @@ function Home() {
             <img
               src={Promo10}
               alt="Slide 10"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={Promo11}
               alt="Slide 11"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={Promo12}
               alt="Slide 12"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={Promo13}
               alt="Slide 13"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={Promo14}
               alt="Slide 14"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={Promo15}
               alt="Slide 15"
-              className="w-full xl:h-auto lg:h-auto md:h-auto h-[200px] object-cover rounded-lg"
+              className="w-full xl:h-auto lg:h-auto md:h-auto h-[500px] rounded-lg"
             />
           </SwiperSlide>
         </Swiper>
